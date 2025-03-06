@@ -12,7 +12,7 @@
     <div class="product-container">
         <img src="smux.jpg" alt="Product Image" class="product-image">
         
-        <!-- Price tag directly under the image -->
+        
         <div class="price-tag">
             <span class="price">$24.99</span>
         </div>
