@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9b5d1, #fdd7e4); /* Soft pink gradient */
+    color: #fff;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    color: #fff;
+}
+
+/* Header Styling */
+.header {
+    background: url('https://www.example.com/painted-makeup-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    text-align: center;
+    max-width: 80%;
+}
+
+.header h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Main section */
+.intro {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+.intro h2 {
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: plum; /* Light pinkish text color */
+    margin-top: 10px;
+}
+
+/* Button Styling (if needed) */
+button {
+    padding: 15px 30px;
+    background: #e4c1d9;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f9b5d1; /* Lighter pink */
+}
+img {
+    height:400px;
+    width:600px
+}

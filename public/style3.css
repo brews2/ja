@@ -1,0 +1,86 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    /* Create a moving gradient background */
+    background: linear-gradient(45deg, #f9b5d1, #ff80bf, #fdd7e4);
+    background-size: 600% 600%;
+    animation: gradientMove 10s ease infinite; /* Animation to move the gradient */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents any overflow issues */
+}
+
+/* Animation to move the gradient */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Page title */
+.page-title {
+    font-size: 2.5em;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Product container */
+.product-container {
+    display: flex;
+    flex-direction: column; /* Ensure that items inside the container stack vertically */
+    align-items: center; /* Center the contents horizontally */
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Product image */
+.product-image {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Price tag styling */
+.price-tag {
+    margin-top: 15px; /* Ensures space between the image and the price tag */
+    font-size: 1.8em;
+    font-family: 'Georgia', serif;
+    background-color: #ff80bf; /* Feminine light pink */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Price text style */
+.price {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Hover effect for product image */
+.product-container:hover .product-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for price tag */
+.product-container:hover .price-tag {
+    background-color: #ff66b2; /* Darker pink on hover */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
