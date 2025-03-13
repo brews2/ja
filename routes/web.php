@@ -13,6 +13,10 @@ Route::get('/products', function () {
     return view('products');
 });
 
+Route::get('/diary', function () {
+    return view('diary');
+});
+
 Route::get('/todos', [ToDoController::class, 'index']);
 
 Route::get('/diaries', [DiaryController::class, 'index']);
