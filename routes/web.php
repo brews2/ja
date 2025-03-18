@@ -9,12 +9,16 @@ Route::get('/painted', function () {
     return view('painted');
 });
 
+Route::get('/james', function () {
+    return view('james');
+});
+
 Route::get('/products', function () {
     return view('products');
 });
 
 Route::get('/diary', function () {
-    return view('diary');
+    return view('diaries');
 });
 
 Route::get('/todos', [ToDoController::class, 'index']);

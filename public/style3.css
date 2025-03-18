@@ -4,13 +4,14 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-
+    
     /* Create a moving gradient background */
     background: linear-gradient(45deg, #f9b5d1, #ff80bf, #fdd7e4);
     background-size: 600% 600%;
     animation: gradientMove 10s ease infinite; /* Animation to move the gradient */
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Prevents any overflow issues */
+    margin-top: 70px; /* Pārvieto saturu zem navigācijas joslas */
 }
 
 /* Animation to move the gradient */
@@ -24,6 +25,42 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Header & Navigation Styling */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0; /* Maina top, lai būtu no pašas lapas augšas */
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff80bf; /* Change color on hover */
 }
 
 /* Page title */

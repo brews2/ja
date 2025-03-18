@@ -18,9 +18,11 @@ class DiaryController extends Controller
         
         $diaries = Diary::all();
         
-        
         return view('diaries.index', compact('diaries'));
     }
+    public function show(Diary $diary) {
+        return view("diaries.show", compact("diary"));
+      }
 
 
 }
