@@ -4,7 +4,9 @@
 
 
 <x-layout>
-
+<x-slot:title>
+    to do
+  </x-slot:title>
   <ul>
 
   <h1>Visi veicamie uzdevumi</h1>
