@@ -1,10 +1,13 @@
 <x-layout>
-<x-slot:title>Izveidot uzdevumu</x-slot:title>
-<h1>Izveidot uzdevumu</h1>
+    <x-slot:title>Izveidot uzdevumu</x-slot:title>
+    <h1>Izveidot uzdevumu</h1>
 
-<form>
-  <input name="content" />
-  <button>Saglabāt</button>
-</form>
-
+    
+    <div class="form-container">
+        <form method="POST" action="/todos">
+            @csrf  
+            <input name="content" placeholder="Ievadiet uzdevuma saturu" />
+            <button>Saglabāt</button>
+        </form>
+    </div>
 </x-layout>

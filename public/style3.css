@@ -121,3 +121,6 @@ nav ul li a:hover {
     background-color: #ff66b2; /* Darker pink on hover */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
+.form-container {
+    margin-top: 60px; /* Adjust the value to move the form lower */
+}

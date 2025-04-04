@@ -9,3 +9,7 @@ class ToDo extends Model
 {
     use HasFactory;
 }
+class ToDo extends Model
+{
+  protected $fillable = ["content", "completed"];
+}
