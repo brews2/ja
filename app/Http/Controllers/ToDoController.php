@@ -20,7 +20,8 @@ class ToDoController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            "content" => ["required", "max:255"]
+            "content" => ["required", "max:255"],
+            "completed" => ["boolean"]
           ]);
 
         ToDo::create([
@@ -36,4 +37,30 @@ class ToDoController extends Controller
     {
         return view('todos.create'); 
     }
+
+
+    public function edit(Todo $todo)
+    {
+        return view("todos.edit", compact('todo'));
+    }
+    
+
+    public function update(Request $request, ToDo $todo)
+{
+    
+        $validated = $request->validate([
+            "content" => ["required", "max:255"],
+            "completed" => ["boolean"]
+          ]);
+
+        ToDo::create([
+            "content" => $validated["content"],
+            "completed" => false
+          ]);
+          return redirect("/todos");
+          $todo->save(); 
+          return redirect("/todos/{$todo->id}");
+}
+
+
 }
