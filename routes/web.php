@@ -44,3 +44,6 @@ Route::put('/diaries/{diary}', [DiaryController::class, 'update'])->name('diarie
 
 Route::get('/diaries/{diary}/edit', [DiaryController::class, 'edit']);
 Route::put('/diaries/{diary}', [DiaryController::class, 'update']);
+
+Route::delete('/todos/{todo}', [ToDoController::class, 'destroy']);
+Route::delete('/diaries/{diary}', [DiaryController::class, 'destroy']);
