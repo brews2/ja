@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>
-<header class="slay-queen-header">
-    <h1>Slay Queen!</h1>
-    <p>You better work, b****</p>
-    <img src="ru.gif" />
-  </header>
+
+@auth
+    <p>Sveiks, {{ Auth::user()->first_name }}</p>
+    <img src="hi.jpg">
+
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit">Atteikties</button>
+    </form>
+    <form action="/todos">
+    @csrf
+    <button>
+    to doooo
+    </button>
+    </form>
+@endauth
+
+@guest
+    <p>Sveiks, viesi!</p>
+    <a href="{{ route('login') }}">Pierakstīties</a> |
+    <a href="{{ route('register') }}">Reģistrēties</a>
+    <img src="bye.jpg">
+    <form action="/painted">
+    @csrf
+    <button>
+    Fun
+    </button>
+    </form>
+@endguest
+
 </body>
 </html>
